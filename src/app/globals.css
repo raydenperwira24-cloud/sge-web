@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* =========================
+   ROOT SYSTEM (LIGHT/DARK)
+========================= */
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+
+  /* brand color (SGE) */
+  --primary: #2f6f4f;
+  --accent: #caa45a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* =========================
+   BASE
+========================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+  letter-spacing: 0.02em;
+
+  /* smoother rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   SELECTION
+========================= */
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* =========================
+   SCROLLBAR (PREMIUM FEEL)
+========================= */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* =========================
+   ANIMATION (SAFE VERSION)
+========================= */
+
+
+a,
+button {
+  transition: all 0.25s ease;
+}
+
+/* =========================
+   UTILITY (OPTIONAL)
+========================= */
+.container-sge {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.7;
+}
