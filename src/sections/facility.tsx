@@ -36,13 +36,7 @@ export default function Facility() {
         <p className="text-sm tracking-widest text-gray-400 uppercase mb-2">
           Facility
         </p>
-        <h2 className="text-4xl font-semibold">
-          Our Production Environment
-        </h2>
-        <p className="text-gray-500 mt-4 max-w-2xl">
-          Equipped with advanced machinery and strict quality control systems to ensure precision manufacturing.
-        </p>
-      </div>
+   </div>
 
       {/* HERO VIDEO */}
       <div className="relative w-full h-[500px] mb-24 overflow-hidden">
@@ -125,14 +119,7 @@ export default function Facility() {
       <div className="max-w-5xl mx-auto px-6 mt-28 space-y-20">
 
         <div>
-          <h3 className="text-3xl font-semibold mb-4">
-            Production Capability
-          </h3>
-          <p className="text-gray-600 leading-relaxed">
-            Our production facility is equipped with advanced CNC machines,
-            precision fabrication tools, and assembly lines designed to meet
-            industrial standards.
-          </p>
+          
         </div>
 
         <div>

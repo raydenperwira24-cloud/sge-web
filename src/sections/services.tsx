@@ -13,7 +13,7 @@ export default function Services() {
 
           <Card id="job-order" title="Job Order" desc="Custom fabrication engineering tailored to your needs." />
 
-          <Card id="maspro" title="Mass Production" desc="Efficient, scalable manufacturing process." />
+          <Card id="maspro" title="Mas Production" desc="Efficient, scalable manufacturing process." />
 
           <Card id="maintenance" title="Maintenance Engineering" desc="Long-term support and industrial maintenance." />
 

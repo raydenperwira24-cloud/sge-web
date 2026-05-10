@@ -32,6 +32,23 @@ export default function JobOrderPage() {
         "Material: Stainless Steel",
       ],
     },
+     {
+      name: "Pipe Roll Welding Machine",
+      image: "/products/prod4.png",
+      spec: [
+        "Forming : 0.7-2.0 mm",
+        "Speed: 5-6 /minute ",
+        "Material: Hydraulic Pump",
+      ],
+    }, {
+      name: "Buffing Grinder Machine",
+      image: "/products/prod5.png",
+      spec: [
+        "Length: 10 meter (Heavy Duty)",
+        "Speed: 3000 Rpm",
+        "Power: 300-1300 W",
+      ],
+    },
   ];
   
 <ProductCard />

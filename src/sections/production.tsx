@@ -27,7 +27,7 @@ export default function Production() {
       title: "Assembly Line",
       desc: "Efficient assembly system for industrial products.",
       image: "/production/assembly.jpg",
-      specs: ["QC Integrated", "Mass Production", "Lean System"],
+      specs: ["QC Integrated", "Mas Pro", "Lean System"],
     },
   ];
 
@@ -37,14 +37,8 @@ export default function Production() {
       {/* HEADER */}
       <div className="max-w-7xl mx-auto px-6 mb-20">
         <p className="text-sm tracking-widest text-gray-400 uppercase mb-2">
-          Production
-        </p>
-        <h2 className="text-4xl font-semibold">
-          Production Capability
-        </h2>
-        <p className="text-gray-500 mt-4 max-w-2xl">
-          Equipped with modern machinery and skilled workforce to deliver high-quality engineering solutions.
-        </p>
+          Facility & Quality Controls
+        </p>        
       </div>
 
       {/* GRID */}

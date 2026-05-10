@@ -93,14 +93,21 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
 
-          <NavLink label="Table Lift" onClick={() => goTo("table-lift")} />
-
           <NavItem label="Facility" active={active} setActive={setActive}>
             <DropdownBtn label="Production" onClick={() => goTo("production")} />
             <DropdownBtn label="Quality Control" onClick={() => goTo("quality-control")} />
           </NavItem>
 
           <NavLink label="Client" onClick={() => goTo("client")} />
+
+          <Link
+      href="/table-lift"
+        className="relative group"
+>
+      Table Lift
+
+       <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-green-700 group-hover:w-full transition-all"></span>
+      </Link>
 
           <button
             onClick={() => goTo("contact")}
@@ -119,7 +126,6 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div className="md:hidden bg-white p-6 space-y-4 shadow-lg">
-            <p onClick={() => goTo("table-lift")}>Table Lift</p>
             <p onClick={() => goTo("production")}>Production</p>
             <p onClick={() => goTo("quality-control")}>Quality Control</p>
             <p onClick={() => goTo("client")}>Client</p>
