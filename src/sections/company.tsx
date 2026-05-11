@@ -98,7 +98,7 @@ function Experience() {
           >
 
             <Image
-              src="/experience/picture4.jpg"
+              src="/experience/Picture4.jpg"
               alt="Industrial Experience"
               fill
               className="object-cover"
