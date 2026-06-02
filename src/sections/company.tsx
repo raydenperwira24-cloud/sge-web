@@ -7,19 +7,19 @@ export default function Company() {
   return (
     <section className="py-28 bg-white">
 
-      {/* GREETING */}
       <Greeting />
 
-      <VisionMission />
+      <Divider />
 
-      {/* BOARD */}
-      <Board />
+      <VisionMission />
 
       <Divider />
 
       <HistoryTimeline />
+
+      <Divider />
+
       <CoreValues />
-        
 
       <Divider />
 
@@ -33,19 +33,23 @@ export default function Company() {
   );
 }
 
+//////////////////////////
+// EXPERIENCE
+//////////////////////////
+
 function Experience() {
   const stats = [
     {
       value: "25+",
-      label: "Years Experience",
+      label: "Tahun",
     },
     {
       value: "250+",
-      label: "Projects Completed",
+      label: "Project Selesai",
     },
     {
-      value: "50+",
-      label: "Industrial Clients",
+      value: "30+",
+      label: "Mitra Industri",
     },
     {
       value: "OnTime",
@@ -59,7 +63,6 @@ function Experience() {
       className="relative py-32 overflow-hidden bg-gradient-to-b from-white to-gray-50"
     >
 
-      {/* BACKGROUND ACCENT */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green-700/5 blur-3xl rounded-full"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -86,7 +89,6 @@ function Experience() {
 
         </div>
 
-        {/* MAIN GRID */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* IMAGE */}
@@ -98,39 +100,20 @@ function Experience() {
           >
 
             <Image
-              src="/experience/Picture4.jpg"
+              src="/experience/Pictures2.png"
               alt="Industrial Experience"
               fill
-              className="object-cover"
+              className="cover-contain"
             />
 
-            {/* OVERLAY */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
 
-            {/* FLOATING INFO */}
-            <div className="absolute bottom-8 left-8 text-white max-w-md">
-
-              <p className="text-sm uppercase tracking-[0.2em] text-gray-300 mb-3">
-                Manufacturing Excellence
-              </p>
-
-              <h3 className="text-3xl font-semibold mb-4">
-                Precision Engineering
-                for Modern Industry
-              </h3>
-
-              <p className="text-gray-200 text-sm leading-relaxed">
-                     Mendukung industri otomotif, logistik,
-
-                      otomasi, dan manufaktur
-                          dengan solusi teknik yang andal.
-              </p>
+            <div className="absolute bottom-8 left-8 text-black min-w-ml">
 
             </div>
 
           </motion.div>
 
-          {/* RIGHT CONTENT */}
           <div>
 
             {/* STATS */}
@@ -158,7 +141,7 @@ function Experience() {
 
             </div>
 
-            {/* LIST */}
+            {/* BUSINESS CORE */}
             <div className="bg-white rounded-3xl border border-gray-100 p-8 shadow-sm">
 
               <h3 className="text-2xl font-semibold mb-6">
@@ -167,30 +150,11 @@ function Experience() {
 
               <div className="space-y-5 text-gray-600">
 
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-green-700 mt-2"></div>
-                  <p>Special Purpose Machine maker</p>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-green-700 mt-2"></div>
-                  <p>Table Lifter</p>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-green-700 mt-2"></div>
-                  <p>Industrial Conveyor Automation System</p>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-green-700 mt-2"></div>
-                  <p>Precision Parts</p>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-green-700 mt-2"></div>
-                  <p>Industrial Parts and OEEM Parts</p>
-                </div>
+                <BusinessItem text="Special Purpose Machine maker" />
+                <BusinessItem text="Table Lifter" />
+                <BusinessItem text="Industrial Conveyor Automation System" />
+                <BusinessItem text="Precision Parts" />
+                <BusinessItem text="Industrial Parts and OEM Parts" />
 
               </div>
 
@@ -205,6 +169,19 @@ function Experience() {
     </section>
   );
 }
+
+function BusinessItem({ text }: any) {
+  return (
+    <div className="flex items-start gap-4">
+      <div className="w-2 h-2 rounded-full bg-green-700 mt-2"></div>
+      <p>{text}</p>
+    </div>
+  );
+}
+
+//////////////////////////
+// COMPLIANCE
+//////////////////////////
 
 function Compliance() {
   const items = [
@@ -243,6 +220,7 @@ function Compliance() {
             key={i}
             className="p-6 border rounded-4xl hover:shadow-lg transition"
           >
+
             <div className="relative w-full h-100 mb-5">
               <img
                 src={item.image}
@@ -250,152 +228,151 @@ function Compliance() {
               />
             </div>
 
-            <h3 className="text-lg font-semibold">{item.title}</h3>
+            <h3 className="text-lg font-semibold">
+              {item.title}
+            </h3>
+
             <p className="text-sm text-gray-500 mt-2">
               {item.desc}
             </p>
+
           </div>
         ))}
 
       </div>
+
     </section>
   );
 }
 
-
+//////////////////////////
+// HISTORY
+//////////////////////////
 
 function HistoryTimeline() {
   const timeline = [
     {
       year: "2001",
       title: "Company Founded",
-      desc: "Mulai didirikan dengan menyewa workshop dan fasilitas mesin di Balai Pelatihan Kerja.",
+      desc: "Mulai didirikan dengan menyewa workshop dan fasilitas mesin.",
     },
     {
       year: "2003",
-      title: "Rent an Office",
-      desc: "Pindah dan menempati office dan workshop baru dengan menyewa di Jl.Raya Klari no.421 dan penambahan fasilitas mesin yang jauh lebih memadai",
+      title: "New Workshop",
+      desc: "Pindah ke workshop baru dengan fasilitas lebih lengkap.",
     },
     {
       year: "2004",
-      title: "Evolved",
-      desc: "Penambahan area Fabrikasi dan Mesin CNC, memulai pembuatan Mesin Penggunaan Khusus (Special Purpose Machine)",
+      title: "CNC Expansion",
+      desc: "Penambahan area fabrikasi dan mesin CNC.",
     },
     {
       year: "2005",
-      title: "Consistency",
-      desc: "Mulai masuk dalam pengerjaan komponen standar industri (OEMM) otomotif, musik dan lainnya. Penambahan area produksi untuk fabrikasi dan material cutting",
+      title: "Industrial Product",
+      desc: "Mulai masuk dalam pengerjaan komponen standar industri (OEMM) otomotif, musik dan lainnya.",
     },
     {
       year: "2009",
-      title: "Opening Officially",
-      desc: "Pembukaan kantor perwakilan di Delta Mas-Cikarang. Membeli lahan dan bangunan seluas 4500m di Jl.Raya Klari no.421. Memulai memasarkan self Brand 'SugLift' untuk Table Lifter pada pasar lokal. Membeli penambahan Machining Centre dan CNC Lathe",
+      title: "Official Expansion",
+      desc: "Membeli lahan 4500m dan memasarkan SugLift.",
     },
     {
       year: "2012",
-      title: "Penambahan Area Assembling"
+      title: "Area Expansion",
+      desc: "Penambahan area Assembling.",
     },
     {
       year: "2013",
-      title: "Penambahan Mesin",
-      desc: "Penambahan mesin CNC & Quality Manufacturing Equipment (CMM, Harding Tester, Roughing Tester, Dll.)",
+      title: "CNC Expansion",
+      desc: "Penambahan mesin CNC dan Quality Manufacturing Equipment (CMM, Harding&Roughing Tester).",
     },
     {
       year: "2014",
-      title: "a new one",
-      desc: "Dibuka workshop di daerah BTJ",
+      title: "Workshop Expansion",
+      desc: "Penambahan area Workshop di BTJ.",
     },
     {
       year: "2015",
-      title: "Upgrade final machine",
-      desc: "Pembelian mesin mempunyai teknologi 5-Axis",
+      title: "5 Axis Technology",
+      desc: "Upgrade mesin teknologi 5-Axis.",
     },
   ];
 
   return (
-    <section id="history" className="max-w-6xl mx-auto px-6 py-28">
+    <section
+      id="history"
+      className="max-w-7xl mx-auto px-6 py-28 overflow-hidden"
+    >
 
       {/* HEADER */}
-      <div className="mb-20">
-        <p className="text-sm tracking-widest text-gray-400 uppercase mb-2">
+      <div className="mb-16">
+
+        <p className="text-sm tracking-[0.3em] uppercase text-gray-400 mb-3">
           Company
         </p>
+
         <h2 className="text-4xl font-semibold">
-          Our Journey
+          Company Journey
         </h2>
+
       </div>
 
-     {/* TIMELINE */}
-<div className="relative max-w-6xl mx-auto">
+      {/* HORIZONTAL TIMELINE */}
+      <div className="overflow-x-auto scrollbar-hide">
 
-  {/* CENTER LINE */}
-  <div className="absolute left-4 md:left-1/2 top-0 h-full w-px bg-gradient-to-b from-transparent via-green-700/30 to-transparent -translate-x-1/2"></div>
+        <div className="flex gap-6 min-w-max pb-4">
 
-  <div className="space-y-4 md:space-y-2">
+          {timeline.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.08 }}
+              whileHover={{ y: -6 }}
+              className="relative w-[320px] flex-shrink-0"
+            >
 
-    {timeline.map((item, i) => (
-      <motion.div
-        key={i}
-        className={`relative flex flex-col md:flex-row items-start ${
-          i % 2 === 0
-            ? "md:flex-row"
-            : "md:flex-row-reverse"
-        }`}
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: i * 0.08 }}
-      >
+              {/* TOP LINE */}
+              <div className="absolute top-8 left-0 w-full h-[2px] bg-gray-200"></div>
 
-        {/* SIDE SPACE */}
-        <div className="hidden md:block md:w-1/2"></div>
+              {/* DOT */}
+              <div className="relative z-10 w-5 h-5 rounded-full bg-green-700 border-4 border-white shadow-md"></div>
 
-        {/* DOT */}
-        <div className="absolute left-4 md:left-1/2 top-8 w-4 h-4 rounded-full bg-green-700 border-4 border-white shadow-lg -translate-x-1/2 z-10"></div>
+              {/* CARD */}
+              <div className="mt-8 bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500">
 
-        {/* CARD */}
-        <div className="w-full md:w-1/2 pl-14 md:px-6">
+                {/* YEAR */}
+                <div className="inline-flex px-4 py-1 rounded-full bg-green-700/10 text-green-700 text-xs font-semibold mb-5">
+                  {item.year}
+                </div>
 
-          <motion.div
-  whileHover={{ y: -4 }}
-  className="max-w-[500px] relative overflow-hidden rounded-2xl border border-gray-100 bg-white/80 backdrop-blur-xl shadow-sm hover:shadow-2xl transition-all duration-500 p-5"
->
+                {/* TITLE */}
+                <h3 className="text-2xl font-semibold mb-4 text-gray-900">
+                  {item.title}
+                </h3>
 
-            {/* GLOW */}
-            <div className="absolute inset-0 bg-gradient-to-br from-green-700/[0.03] to-transparent pointer-events-none"></div>
+                {/* DESC */}
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
 
-            {/* YEAR */}
-            <div className="inline-flex items-center px-4 py-1 rounded-full bg-green-700/10 text-green-700 text-xs font-semibold mb-4">
-              {item.year}
-            </div>
+                {/* ACCENT */}
+                <div className="mt-6 w-14 h-[2px] bg-green-700 rounded-full"></div>
 
-            {/* TITLE */}
-            <h3 className="text-2xl font-semibold mb-3 text-gray-900">
-              {item.title}
-            </h3>
+              </div>
 
-            {/* DESC */}
-            <p className="text-gray-600 leading-relaxed text-sm">
-              {item.desc}
-            </p>
-
-            {/* BOTTOM ACCENT */}
-            <div className="mt-6 h-[2px] w-14 bg-green-700 rounded-full"></div>
-
-          </motion.div>
+            </motion.div>
+          ))}
 
         </div>
 
-      </motion.div>
-    ))}
-
-  </div>
-</div>
+      </div>
 
     </section>
   );
 }
 //////////////////////////
-// 🔥 BOARD SECTION (UPGRADE)
+// GREETING
 //////////////////////////
 
 function Greeting() {
@@ -404,201 +381,158 @@ function Greeting() {
       id="company-intro"
       className="max-w-6xl mx-auto px-6 py-24"
     >
+
       <div className="grid md:grid-cols-2 gap-16 items-center">
 
-        {/* FOTO DIREKTUR */}
-        <div className="relative w-full h-[650px] rounded-2xl overflow-hidden shadow-lg">
-          <Image
-            src="/board/director1.jpg"
-            alt="Director"
-            fill
-            className="object-cover"
-            priority
-          />
+        {/* FOTO */}
+        <div className="object-flex-grid items-center">
 
-          {/* subtle overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+          <div className="relative w-full h-[550px] rounded-2xl overflow-hidden shadow-lg">
+
+            <Image
+              src="/board/director1.jpg"
+              alt="Director"
+              fill
+              className="object-cover"
+              priority
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+          </div>
+
+          {/* SIGN */}
+          <div className="mt-6 text-center">
+
+            <div className="w-14 h-[2px] bg-green-700 mx-auto mb-4 rounded-full"></div>
+
+            <p className="text-xl font-semibold text-gray-800">
+              Muhammad Hasyim
+            </p>
+
+            <p className="text-sm tracking-[0.2em] uppercase text-gray-500">
+              President Director
+            </p>
+
+          </div>
+
         </div>
-
+                                                                                                                                                                                                                                                                                                                                                                                                         
         {/* TEXT */}
         <div>
 
-          <p className="text-sm tracking-widest text-gray-400 uppercase mb-3">
-            Message from Director
-          </p>
-
-          <h2 className="text-4xl md:text-5xl font-semibold mb-6 leading-tight">
-            Integritas dalam memberikan pelayanan
+          <h2 className="text-4xl md:text-4xl font-bold mb-10 leading-near">
+            Keunggulan dalam memberikan pelayanan
           </h2>
 
-          <p className="text-gray-600 leading-relaxed mb-4">
-            Kami telah beroperasi sejak tahun 2001, memberikan solusi dan layanan optimal pada pelanggan berupa layanan engineering dan menghasilkan produk-produk unik yang mendukung produktifitas dan proses manufaktur. Untuk itu, kami secara terus menerus berupaya meningkatkan kemampuan baik dari segi tekhnologi, sumber daya manusia dan sistem manajemen agar selalu bisa menjadi bagian penting pada industri manufaktur yang terus tumbuh dan berkembang dengan pesat.
-         Kami akan terus mendukung industri manufaktur dengan berkontribusi aktif menjadi mitra strategis untuk mengembangkan bisnis dan perusahaan Anda.
+          <p className="text-gray-600 leading-relaxed">
+            Kami telah beroperasi sejak tahun 2001,
+            memberikan solusi dan layanan optimal
+            pada pelanggan berupa layanan engineering dan
+            menghasilkan produk-produk unik yang mendukung produktifitas 
+            dan proses manufaktur. Untuk itu, kami secara terus menerus
+            berupaya meningkatkan kemampuan baik dari segi teknologi, sumber daya manusia dan
+            sistem manajemen agar selalu bisa menjadi bagian penting pada industri manufaktur 
+            yang terus tumbuh dan berkembang dengan pesat.
+            
+            Kami akan terus mendukung industri manufaktur dengan berkontribusi aktif menjadi mitra strategis 
+            untuk mengembangkan bisnis dan perusahaan anda.
 
           </p>
-
-          <p className="text-gray-600 leading-relaxed mb-6">
-            We have been operating since 2001, by giving the solutions and optimal services to customer as engineering servicer, And producess, So that we are constantly working to improve the ability from technology, human resources and management system so can always be an improtant part of the manufacturing industry that grow and develop so fast. We will support the manufacturing industry by active contributing and become a strategic partner to develop your business and company.
-          </p>
-
-          {/* SIGNATURE */}
-          <div className="mt-8">
-            <p className="font-semibold text-gray-800">
-              Muhammad Hasyim
-            </p>
-            <p className="text-sm text-gray-500">
-              President Director
-            </p>
-          </div>
 
         </div>
 
       </div>
-    </section>
-  );
-}
 
-function Board() {
-  const members = [
-    {
-      name: "Muhammad Hasyim",
-      role: "President Director",
-      image: "/board/director.jpg",
-    },
-    {
-      name: "Aceng Suhendi",
-      role: "General Manager",
-      image: "/board/ops.jpg",
-    },
-    {
-      name: "Yuyun Yuningsih",
-      role: "Finance & Human Resources",
-      image: "/board/yuyun.png",
-    },
-  ];
-
-  return (
-    <section id="board" className="max-w-6xl mx-auto px-6 py-20">
-
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-      >
-        <p className="text-sm tracking-widest text-gray-400 uppercase mb-2">
-          Company
-        </p>
-
-        <h2 className="text-4xl font-semibold mb-12">
-          Board of Direction
-        </h2>
-
-        {/* GRID */}
-        <div className="grid md:grid-cols-4 gap-8">
-
-          {members.map((m, i) => (
-            <motion.div
-              key={i}
-              className="group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-            >
-              {/* FOTO */}
-              <div className="relative w-full h-80 rounded-2xl overflow-hidden bg-gray-200">
-
-                <Image
-                  src={m.image}
-                  alt={m.name}
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-
-                {/* overlay subtle */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-              </div>
-
-              {/* INFO */}
-              <div className="mt-4">
-                <h3 className="text-lg font-semibold">{m.name}</h3>
-                <p className="text-sm text-gray-500">{m.role}</p>
-              </div>
-            </motion.div>
-          ))}
-
-        </div>
-      </motion.div>
     </section>
   );
 }
 
 //////////////////////////
-// SECTION LAIN (TETAP)
+// VISION MISSION
 //////////////////////////
-
-function Section({ id, title, desc }: any) {
-  return (
-    <motion.div
-      id={id}
-      className="max-w-5xl mx-auto px-6 py-16"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-    >
-      <p className="text-sm tracking-widest text-gray-400 mb-2 uppercase">
-        Company
-      </p>
-      <h2 className="text-4xl font-semibold mb-4">{title}</h2>
-      <p className="text-gray-600 max-w-2xl">{desc}</p>
-    </motion.div>
-  );
-}
-
-function Divider() {
-  return <div className="h-px bg-gray-200 max-w-5xl mx-auto" />;
-}
 
 function VisionMission() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-24">
 
-      <div className="grid md:grid-cols-2 gap-16">
+      <div className="bg-white rounded-[32px] p-10 shadow-sm border border-gray-100">
 
-        {/* VISI */}
-        <div>
-          <p className="text-sm tracking-widest text-gray-400 uppercase mb-3">
-            Vision
-          </p>
+        <p className="text-sm tracking-[0.35em] text-gray-400 uppercase mb-4">
+          Vision & Mission
+        </p>
 
-          <h3 className="text-3xl font-semibold mb-4">
-            Perusahaan Manufaktur yang Unggul dan Efisien
-          </h3>
+        <h3 className="text-4xl font-semibold mb-10 leading-tight">
+          The Excellence Services (TES)
+           
+        </h3>
+
+        {/* VISION */}
+        <div className="mb-10">
+
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-[2px] bg-green-700"></div>
+
+            <p className="text-lg font-semibold text-gray-900">
+              Vision
+            </p>
+          </div>
 
           <p className="text-gray-600 leading-relaxed">
-            Menjadi yang terdepan dalam layanan engineering dan menghasilkan produk yang berorientasi pada QCDSE (Quality, Cost, Delivery, Safety, Environment) untuk memberikan kontribusi margin dan kepuasan pelanggan.
+            Menjadi yang terdepan dalam layanan engineering
+            dan menghasilkan produk yang berorientasi pada
+            QCDSE (Quality, Cost, Delivery, Safety, Environment) 
+            untuk memberikan kontribusi margin dan kepuasan pelanggan.
           </p>
 
-          <p className="text-gray-200 font-italic leading-relaxed">
-            Leading company in engineering services and make product with QCDSE (Quality, Cost, Delivery, Safety, Environment) oriented for giving to customer margin contribution satisfaction.
-          </p>
         </div>
 
-        {/* MISI */}
+        {/* MISSION */}
         <div>
-          <p className="text-sm tracking-widest text-gray-400 uppercase mb-3">
-            Mission
-          </p>
 
-          <h3 className="text-3xl font-semibold mb-6">
-            Our Commitment Mission
-          </h3>
+          <div className="flex items-center gap-3 mb-5">
+            <div className="w-10 h-[2px] bg-green-700"></div>
 
-          <ul className="space-y-4 text-gray-600">
-            <li>• Memberikan layanan pembuatan barang berkualitas sesuai dengan kebutuhan pelanggan</li>
-            
+            <p className="text-lg font-semibold text-gray-900">
+              Mission
+            </p>
+          </div>
+
+          <ul className="space-y-5 text-gray-600">
+
+            <li className="flex gap-4">
+              <span className="text-green-700 font-bold">
+                01
+              </span>
+
+              <span>
+                Memberikan layanan pembuatan barang berkualitas sesuai dengan 
+                kebutuhan dan standar pelanggan.
+              </span>
+            </li>
+
+            <li className="flex gap-4">
+              <span className="text-green-700 font-bold">
+                02
+              </span>
+
+              <span>
+                Mengembangkan inovasi engineering industri.
+              </span>
+            </li>
+
+            <li className="flex gap-4">
+              <span className="text-green-700 font-bold">
+                03
+              </span>
+
+              <span>
+                Menjadi mitra strategis industri manufaktur.
+              </span>
+            </li>
+
           </ul>
 
-          <ul className="space-y-4 text-gray-300">
-            <li>• Deliver high-quality products with precision and consistency as client need</li>
-          </ul>
         </div>
 
       </div>
@@ -607,74 +541,95 @@ function VisionMission() {
   );
 }
 
+//////////////////////////
+// CORE VALUES
+//////////////////////////
+
 function CoreValues() {
   const values = [
     {
-      title: "Integritas",
-      desc: "Kami mengutamakan Transparansi, Kejujuran, dan Prinsip yang dipegang teguh dalam setiap proses.",
+      title: "Quality",
+      desc: "Kami mengutamakan kualitas dalam pembuatan produk.",
     },
     {
-      title: "Presisi",
-      desc: "Kami fokus dalam konsistensi juga akurasi untuk memberikan hasil yang terbaik.",
+      title: "Cost",
+      desc: "Kami memberikan layanan terbaik dengan harga yang terjangkau.",
     },
     {
-      title: "Inovasi",
-      desc: "Kami berkembang seiring dengan kemajuan di bidang Teknologi dan menciptakan solusi untuk Industri.",
+      title: "Delivery",
+      desc: "Kami mengutamakan pengiriman tepat waktu dan cepat.",
     },
     {
-      title: "Komitmen",
-      desc: "Kami ber-dedikasi untuk tetap memberi kepuasan pelanggan dan menjalin hubungan erat.",
+      title: "Safety",
+      desc: "Kami berdedikasi dalam kesehatan dan keselamatan di lingkungan produktivitas kerja.",
     },
+    {
+      title: "Environment", 
+      desc: "Kami mengutamakan lingkungan yg bersih dan sehat."
+   }, 
   ];
 
   return (
     <section className="max-w-6xl mx-auto px-6 py-28">
 
-      {/* HEADER */}
       <div className="mb-20">
+
         <p className="text-sm tracking-widest text-gray-400 uppercase mb-2">
           Company
         </p>
+
         <h2 className="text-4xl font-semibold">
-          Core Values
-        </h2>
+            Nilai Jual (Core Values)      
+              </h2>
+
       </div>
 
-      {/* GRID */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="grid md:grid-cols-10 lg:grid-cols-5 gap-9">
 
         {values.map((v, i) => (
           <motion.div
-            key={i}
-            className="group relative border border-gray-100 rounded-xl p-8 bg-white hover:shadow-xl transition-all duration-300"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
-          >
+  key={i}
+  className="group relative overflow-hidden rounded-2xl border border-green-200/70 bg-gradient-to-b from-white to-green-50/30 p-8 hover:shadow-2xl hover:border-green-500 transition-all duration-500"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: i * 0.1 }}
+>
 
-            {/* NUMBER (JAPAN STYLE MINIMAL) */}
-            <span className="absolute top-4 right-6 text-5xl font-bold text-gray-100">
-              {`0${i + 1}`}
-            </span>
+  {/* TOP ACCENT */}
+  <div className="w-14 h-[3px] bg-green-700 rounded-full mb-6 group-hover:w-24 transition-all duration-500"></div>
 
-            {/* TITLE */}
-            <h3 className="text-xl font-semibold mb-3">
-              {v.title}
-            </h3>
+  {/* TITLE */}
+  <h3 className="text-2xl font-semibold mb-4 text-gray-900">
+    {v.title}
+  </h3>
 
-            {/* DESC */}
-            <p className="text-gray-600 text-sm leading-relaxed">
-              {v.desc}
-            </p>
+  {/* DESC */}
+  <p className="text-gray-600 text-sm leading-relaxed">
+    {v.desc}
+  </p>
 
-            {/* UNDERLINE HOVER */}
-            <div className="mt-6 w-0 h-[2px] bg-green-700 group-hover:w-full transition-all duration-300"></div>
+  {/* GLOW EFFECT */}
+  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none">
+    <div className="absolute -top-20 -right-20 w-40 h-40 bg-green-700/10 blur-3xl rounded-full"></div>
+  </div>
 
-          </motion.div>
-        ))}
+</motion.div>     
+        )
+      )
+  }
 
       </div>
 
     </section>
+  );
+}
+
+//////////////////////////
+// DIVIDER
+//////////////////////////
+
+function Divider() {
+  return (
+    <div className="h-px bg-gray-200 max-w-5xl mx-auto" />
   );
 }

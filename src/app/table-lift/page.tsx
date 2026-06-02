@@ -84,7 +84,7 @@ export default function TableLiftPage() {
 
         {/* BG IMAGE */}
         <Image
-          src="/tablelift/hero.jpg"
+          src="/tablelift/hero1.png"
           alt="SugLift"
           fill
           priority
@@ -131,13 +131,11 @@ export default function TableLiftPage() {
             whileInView={{ opacity: 1, x: 0 }}
           >
             <p className="uppercase tracking-[0.3em] text-sm text-gray-400 mb-4">
-              About SugLift
+              About Table Lift
             </p>
 
             <h2 className="text-5xl font-semibold leading-tight mb-8">
-              Custom Design
-              <br />
-              For Your Specific Need:
+              SUGLIFT
             </h2>
 
             <p className="text-gray-600 leading-relaxed mb-6">
@@ -159,17 +157,24 @@ export default function TableLiftPage() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="relative h-[650px] rounded-3xl overflow-hidden"
-          >
-            <Image
-              src="/tablelift/gambar.jpg"
-              alt="About"
-              fill
-              className="grid-cover"
-            />
-          </motion.div>
+  initial={{ opacity: 0, x: 50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  className="relative h-[650px] rounded-3xl overflow-hidden"
+>
+
+  <video
+    src="/tablelift/tabb2.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-cover"
+  />
+
+  {/* overlay optional */}
+  <div className="absolute inset-0 bg-black/20"></div>
+
+</motion.div>
 
         </div>
       </section>
@@ -257,11 +262,6 @@ export default function TableLiftPage() {
 
       </div>
 
-      <button className="mt-5 text-green-700 text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
-        Specification
-        <MoveUpRight size={16} />
-      </button>
-
     </div>
 
   </motion.div>
@@ -287,19 +287,19 @@ export default function TableLiftPage() {
           <div>
 
             <p className="uppercase tracking-[0.3em] text-sm text-gray-400 mb-4">
-              Application
+              APPLICATION
             </p>
 
-            <h2 className="text-5xl font-semibold mb-8">
-              Designed for
-              Modern Industry
+            <h2 className="text-3xl font-semibold mb-2">
+              Custom Design 
+              For Your Specific Need.
             </h2>
 
             <p className="text-gray-600 leading-relaxed mb-10">
-              Suitable for automotive manufacturing,
-              logistics warehouse, assembly line,
-              heavy equipment production,
-              and industrial automation systems.
+              Tersedia untuk otomotif manufaktur,
+              gudang logistic, assembly line,
+             produksi peralatan berat,
+              dan sistem otomatisasi industri.
             </p>
 
             <div className="grid grid-cols-2 gap-5">
@@ -323,9 +323,12 @@ export default function TableLiftPage() {
       >
         <div className="max-w-4xl mx-auto px-6">
 
-          <p className="uppercase tracking-[0.3em] text-sm text-gray-500 mb-5">
-            Contact Us
-          </p>
+         <Link
+  href="/contact"
+  className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-green-700 hover:bg-green-800 text-white transition-all duration-300"
+>
+  Contact Us
+</Link>
 
           <h2 className="text-5xl font-semibold mb-8">
             Need Custom
@@ -337,10 +340,6 @@ export default function TableLiftPage() {
             Our engineering team is ready to help your manufacturing
             operation with custom industrial lifting systems.
           </p>
-
-          <button className="bg-green-700 hover:bg-green-800 transition px-10 py-5 rounded-full text-lg">
-            Contact Sales
-          </button>
 
         </div>
       </section>
