@@ -161,7 +161,7 @@ export default function Navbar() {
             title="OEM"
             desc="Original Equipment Manufacturer"
             image="/menu/oem.png"
-            href="/job-order/oem"
+            href="/job-order/oem-parts"
           />
 
           <MegaProductItem
